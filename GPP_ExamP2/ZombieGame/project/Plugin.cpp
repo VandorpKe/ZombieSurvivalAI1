@@ -46,14 +46,12 @@ void Plugin::Initialize(IBaseInterface* pInterface, PluginInfo& info)
 					new BehaviorAction(BT_Actions::ChangeToFleePurge)
 				}),
 				// Enemy in fov
-				new BehaviorSequence(
-					{
+				new BehaviorSequence({
 					new BehaviorConditional(BT_Conditions::EnemyInFov),
 					new BehaviorAction(BT_Actions::ShootEnemy)
 				}),
 				// Loot items if in FOV
-				new BehaviorSequence(
-					{
+				new BehaviorSequence({
 					new BehaviorConditional(BT_Conditions::IsLootInFov),
 					new BehaviorAction(BT_Actions::LootItems)
 				}),
